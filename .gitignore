@@ -1,0 +1,14 @@
+
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+.vscode/
+*.log
+.DS_Store
+# Dataset might be large, but let's see. 80MB is okay for now, but usually ignored.
+# keeping it simple.

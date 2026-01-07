@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Predictor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="background-animation"></div>
+    <div class="container">
+        <div class="glass-card">
+            <header>
+                <h1>Dream Home Value</h1>
+                <p>AI-Powered House Price Prediction</p>
+            </header>
+            
+            <form id="prediction-form">
+                <div class="input-group">
+                    <label for="area">Area (sq. ft)</label>
+                    <input type="number" id="area" name="area" placeholder="e.g. 2000" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="bedrooms">Bedrooms</label>
+                    <input type="number" id="bedrooms" name="bedrooms" placeholder="e.g. 3" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="bathrooms">Bathrooms</label>
+                    <input type="number" id="bathrooms" name="bathrooms" placeholder="e.g. 2" required>
+                </div>
+
+                <button type="submit" class="cta-button">
+                    <span>Predict Value</span>
+                    <div class="glow"></div>
+                </button>
+            </form>
+
+            <div id="result" class="result-container hidden">
+                <h2>Estimated Price</h2>
+                <div class="price-value" id="price-display"></div>
+                <button id="reset-btn" class="secondary-button">Predict Another</button>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
